@@ -1,73 +1,269 @@
-nums = [1,2,3,4,5,6,7,8,9,10]
-
-# I want 'n' for each 'n' in nums
-my_list = []
-for n in nums:
-  my_list.append(n)
-print my_list
-
-print [n for n in nums]
-
-# I want 'n*n' for each 'n' in nums
-# my_list = []
-# for n in nums:
-#   my_list.append(n*n)
-# print my_list
-
-# Using a map + lambda
-# my_list = map(lambda n: n*n, nums)
-# print my_list
-
-# I want 'n' for each 'n' in nums if 'n' is even
-# my_list = []
-# for n in nums:
-#   if n%2 == 0:
-#     my_list.append(n)
-# print my_list
-
-# Using a filter + lambda
-# my_list = filter(lambda n: n%2 == 0, nums)
-# print my_list
-
-# I want a (letter, num) pair for each letter in 'abcd' and each number in '0123'
-# my_list = []
-# for letter in 'abcd':
-#   for num in range(4):
-#     my_list.append((letter,num))
-# print my_list
-
-# Dictionary Comprehensions
-names = ['Bruce', 'Clark', 'Peter', 'Logan', 'Wade']
-heros = ['Batman', 'Superman', 'Spiderman', 'Wolverine', 'Deadpool']
-# print zip(names, heros)
-
-# I want a dict{'name': 'hero'} for each name,hero in zip(names, heros)
-# my_dict = {}
-# for name, hero in zip(names, heros):
-#     my_dict[name] = hero
-# print my_dict
-
-
-
-# If name not equal to Peter
-
-# Set Comprehensions
-# nums = [1,1,2,1,3,4,3,4,5,5,6,7,8,7,9,9]
-# my_set = set()
-# for n in nums:
-#     my_set.add(n)
-# print my_set
-
-
-# Generator Expressions
-# I want to yield 'n*n' for each 'n' in nums
-nums = [1,2,3,4,5,6,7,8,9,10]
-
-# def gen_func(nums):
-#     for n in nums:
-#         yield n*n
-
-# my_gen = gen_func(nums)
-
-# for i in my_gen:
-#     print i
+404_title="Az oldal nem található"
+404_text="Ezen az oldalon nem található tartalom. Az oldal amit keres nem létezik. Valamit elírt, vagy a tartalom át lett helyezve egy másik címre."
+login="Bejelentkezés"
+500_title="Szerverhiba"
+500_text="Próbálja meg frissíteni az oldalt, vagy vegye fel a kapcsolatot az adminisztrátorral."
+home="Főoldal"
+maintance_title="A rendszer karbantartás alatt van"
+maintance_text="Éppen azon dolgozunk, hogy a rendszer még szuperebb legyen. Hamarosan újra elérhető lesz. Köszönjük türelmét."
+logout_title="Várjuk vissza!"
+logout_text="Ezennel sikeresen kijelentkezett."
+old_browser="Sajnos a böngészője elavult, ezért a rendszert nem fogja tudni megfelelően használni, csak ha frissíti vagy átvált egy modernebb böngészőre."
+noscript="A weboldal megtekintéséhez javascript futtatásának engedélyezése szükséges. Tegye meg a szükséges lépéseket és frissítsen az oldalon."
+login_text="Adja meg az e-mail címét és jelszavát a rendszerbe való belépéshez."
+email="E-mail cím"
+password="Jelszó"
+remember_me="Emlékezzen rám"
+terms_and_conditions_title="Adatvédelmi szabályzat"
+terms_and_conditions_text="A rendszerbe való bejelentkezéssel Ön elismeri, hogy elolvasta, valamint megértette és elfogadta az"
+logout="Kijelentkezés"
+maintance="Karbantartás"
+edit_profile="Profil szerkesztése"
+success_edit="Sikeres módosítás"
+wrong_password="Hibás jelszó"
+wrong_password_match="A két jelszó nem egyezik"
+wrong_password_no_current="A jelszava nem egyezhet meg a jelenlegi jelszóval"
+browse_a_photo="Tallózzon be képet"
+add_new="Új hozzáadása"
+personal_info="Személyi adatok"
+name="Név"
+title="Titulus"
+name_of_mother="Anyja neve"
+date_of_birth="Születésnap"
+place_of_birth="Születési hely"
+nationality="Állampolgárság"
+passes="Igazolványok"
+social_number="TAJ szám"
+tax_number="Adószám"
+id_card_number="Személyi igazolvány"
+expiry="Lejárat"
+YYYY-MM-DD="EEEE-HH-NN"
+passport_number="Útlevél szám"
+license="Licensz"
+bank_account_number="Bankszámlaszám"
+contacts="Elérhetőségek"
+phone_number="Telefonszám"
+home_address="Lakcím"
+security="Biztonság"
+2_factor_authentication="2 faktoros hitelesítés"
+save="Mentés"
+google_authenticator="A hitelesítés a Google Authenticator alkalmazáson keresztül történik. Az alkalmazást okostelefonja áruházából töltheti le ingyenesen."
+notifications="Értesítések"
+event="Esemény"
+feed="Hírfolyam"
+change_password="Jelszó módosítása"
+edit="Módosítás"
+current_password="Jelenlegi jelszó"
+new_password="Új jelszó"
+cancel="Mégse"
+change_avatar="Profilkép módosítás"
+browse="Tallózás"
+educations="Végzettségek"
+files="Fájlok"
+error="Hiba"
+error_zipping="A fájlok becsomagolása meghiúsult!"
+success_upload="Sikeres feltöltés"
+success_delete="Sikeres törlés"
+download_all="Összes letöltése"
+date="Dátum"
+success_add="Sikeres hozzáadás"
+comment="Megjegyzés"
+maxlength="Már"
+LANGUAGE="hu"
+profile_banned="Fiókját letiltottuk! Keresse a rendszergazdát!"
+wrong_email_or_password="Hibás e-mail vagy jelszó!"
+have_a_nice_time="Kellemes időtöltést kívánunk!"
+mysql_title="Adatbázis hiba"
+mysql_text="Nem sikerült csatlakozni az adatbázishoz, kérjük próbálja meg később."
+wrong_password_conditions="A jelszavának minimum 8 karakter hosszúnak kell lennie és tartalmaznia kell kisbetűt, nagybetűt, valamint számot."
+wrong_code="Hibás vagy lejárt kód!"
+turn_on="Bekapcsolás"
+turn_off="Kikapcsolás"
+6_digit_code="6 jegyű kód"
+qr_code="Scannelje be a QR kódot telefonja hitelesítő alkalmazásával!"
+club="Klub"
+already_exists="A hozzáadni kívánt adat már létezik."
+country="Ország"
+address="Cím"
+crest="Címer"
+player="Játékos"
+team="Csapat"
+route_plan="Útvonalterv"
+add="Hozzáadás"
+delete="Törlés"
+are_you_sure?="Biztos benne?"
+search="Keresés"
+contact_buttons="A fenti gombokra kattintva azonnali hívást indíthat, valamint e-mailt írhat a kontaktnak."
+detailed_sheet="Részletes adatlap"
+league="Liga"
+season="Szezon"
+national_team="Válogatott"
+success_activate="Sikeres aktiválás"
+success_deactivate="Sikeres deaktiválás"
+training="Edzés"
+match="Mérkőzés"
+stat="Statisztika"
+measure="Felmérés"
+full_load="Terhelés"
+injury="Sérülés"
+evaluation="Értékelés"
+card_expiry="Lejáró igazolvány"
+playtime="Játékidő"
+minute="perc"
+download="Letöltés"
+trainer="Edző"
+player_associated="Játékos társítása"
+trainer_associated="Edző társítása"
+archiving="Archíválás"
+download_profile="Profil letöltése"
+activation="Aktiválás"
+deleting="Törlés"
+motoric_measure="Motorikus felmérés"
+human_biology="Testösszetétel"
+physiology_measure="Élettani mérés"
+any="Bármelyik"
+default="Alapértelmezett"
+occurrence="Előfordulás"
+filter="Szűrő"
+evaluation_progress="Előrelépés"
+evaluation_developed="Fejlesztendő területek"
+evaluation_next="Következő félév célja"
+user="Felhaszáló"
+operations="Műveletek"
+uploader="Feltöltő"
+archive="Archív"
+own="Saját"
+all="Összes"
+colleague="Kolléga"
+drill="Feladat"
+favourite="Kedvenc"
+wrong_email="A megadott e-mail címmel már létezik profil."
+success_registration="Sikeres regisztráció"
+dear="Tisztelt"
+authorization_level="Jogosultsági szint"
+dorm="Kollégium"
+scout="Scout"
+admin="Adminisztrátor"
+user_group="Felhasználói csoport"
+your_password="Az Ön jelszava"
+success_send="Sikeres küldés!"
+status="Státusz"
+setting="Beállítás"
+can_choose_more="Többet is választhat"
+meeting_group="Értekezlet csoport"
+other="Egyéb"
+time_zone="Időzóna"
+company="Cég"
+system="Rendszer"
+red="Piros"
+orange="Narancs"
+yellow="Sárga"
+green="Zöld"
+limit="Értékhatár"
+phonebook="Telefonkönyv"
+current="Jelenlegi"
+new="Új"
+number="Sorszám"
+change_season="Szezon váltás"
+capacity="Kapacitás"
+category="Kategória"
+pitch="Pálya"
+dressing_room="Öltöző"
+contract="Szerződés"
+goal="Gól"
+type="Típus"
+goal_assist="Gólpassz"
+individual="Egyéni"
+aspect="Szempont"
+basis="Alap"
+line_up="Felállás"
+standard="Standard"
+measurement="Mérés"
+sex="Nem"
+age_group="Korosztály"
+needs_improvement="Fejlesztésre szorul"
+average="Átlagos"
+above_average="Átlag feletti"
+needs_increased_development="Fokozott fejlesztésre szorul"
+female="Nő"
+male="Férfi"
+general="Általános"
+squat="Guggolás"
+bench_press="Fekvenyomás"
+long_jump_from_place="Helyből távolugrás"
+power="Erő"
+with_ball="Labdával"
+without_ball="Labda nélkül"
+error_token="Hibás belépési kísérlet! Hibás token!"
+error_permission="Ön nem rendelkezik elegendő jogosultsággal a művelet elvégzéséhez!"
+error_too_small="Túl kicsi kép méret!"
+welcome="Üdvözöljük!"
+profile="Profil"
+agency="Ügynökség"
+associate="társítása"
+post="Poszt"
+mail_foot="Ez egy automatikusan kézbesített levél, kérjük ne válaszoljon rá. Általános kérdéssel, vagy támogatással kapcsolatban kérjük vegye fel a kapcsolatot munkatársainkkal."
+identification="Azonosító"
+flag="Zászló"
+signature="Aláírás"
+these_presents="Jelenlévők"
+location="Helyszín"
+time="Időpont"
+event_canceled="Esemény törölve"
+add_to_my_calendar="Hozzáadás a naptáramhoz"
+event_added="Önt új eseményhez adták hozzá, melynek részleteit alább olvashatja."
+urgent="Sürgős"
+priority="Prioritás"
+deleted_from_event="Törölték az eseményről"
+download_protocol="Jegyzőkönyv letöltése"
+prev="Előző"
+next="Következő"
+image="Kép"
+description="Leírás"
+print="Nyomtatás"
+upload="Feltöltés"
+video="Videó"
+purpose_of_training="Edzés célja"
+warm_up="Bemelegítés"
+deduction="Levezetés"
+main_part="Fő rész"
+injured="Sérült"
+missed="Hiányzott"
+rehabilitation="Rehabilitáció"
+neutral="Semleges"
+positive="Pozitív"
+negative="Negatív"
+is_here="Jelen"
+station="Állomás"
+data="Adat"
+summary="Összegzés"
+technical="Technikai"
+individual_training="Egyéni képzés"
+extensive="Extenzív"
+intensive="Intenzív"
+speedy="Gyorsasági"
+regeneration="Regenerációs"
+target_load="Cél terhelés"
+error_check_file="Hiba! Kérjük ellenőrizze a fájlt!"
+success_save="Sikeres mentés"
+success_cloning="Sikeres klónozás"
+success_lock="Sikeres lezárás"
+success_unlock="Sikeres feloldás"
+success_move="Sikeres áthelyezés"
+firewall="Tűzfal"
+firewall_rule="Tűzfal szabály"
+firewall_rule_action="Művelet"
+firewall_rule_action_allow="Enged"
+firewall_rule_action_deny="Tagad"
+firewall_filter="Szűrő"
+firewall_filter_type="Típus"
+firewall_filter_type_country="Ország"
+firewall_filter_type_continent="Kontinens"
+firewall_filter_type_ip="IP cím"
+firewall_filter_type_all="Összes más forgalom"
+firewall_previous_ip_filter="Korábbi IP cím"
+error_ip_not_allowed="Az IP cím nem felel meg a tűzfalszabályoknak!"
+continent="Kontinens"
+firewall_info="A tűzfal szabályokat sorrendben (fentről lefele) értendők. Csak az első találat fog érvényesülni."
+exception_message_validation="Hibás adat(ok)"
+exception_message_whitelisting="Legalább egy engedélyező tűzfal szabálynak kell létezni"
